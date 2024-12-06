@@ -1,0 +1,38 @@
+{
+  "name": "@ayato-san/types",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A set of utilities to simplify typing",
+  "author": "Ayato-san <ayatosan.pro@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Ayato-san/types#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayato-san/types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ayato-san/types/issues"
+  },
+  "keywords": [
+    "typescript",
+    "typings",
+    "types"
+  ],
+  "exports": {
+    ".": {
+      "types": "./type.d.ts"
+    }
+  },
+  "files": [
+    "type.d.ts"
+  ],
+  "scripts": {
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@ayato-san/tooling-configs": "^2.0.4",
+    "@types/node": "^22.10.1",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2"
+  }
+}

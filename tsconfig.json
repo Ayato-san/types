@@ -1,0 +1,3 @@
+{
+  "extends": "@ayato-san/tooling-configs/tsconfig.package"
+}
