@@ -23,4 +23,22 @@ type EnumValues<T> = T[keyof T]
 /** Represents an array that contains at least one element of type `T`. */
 type NonEmptyArray<T> = [T, ...T[]]
 
-export type { EnumKeys, EnumValues, NonEmptyArray, PublicOnly, ReadonlyKeys, WritableKeys }
+/** Extracts the keys of a union type. */
+type UnionKeys<T> = T extends T ? keyof T : never
+
+type StrictUnionHelper<T, TAll> = T extends T
+  ? T & Partial<Record<Exclude<UnionKeys<TAll>, keyof T>, never>>
+  : never
+
+/** Make the union type strict. */
+type StrictUnion<T> = StrictUnionHelper<T, T>
+
+export type {
+  EnumKeys,
+  EnumValues,
+  NonEmptyArray,
+  PublicOnly,
+  ReadonlyKeys,
+  StrictUnion,
+  WritableKeys,
+}
